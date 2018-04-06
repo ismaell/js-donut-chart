@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <style>
+      .chart-item-bg {stroke: #ddd}
+      .chart-item-0  {stroke: #dd0000}
+      .chart-item-1  {stroke: #00cc00}
+      .chart-item-2  {stroke: #0000ff}
+    </style>
+  </head>
+  <body>
+    <div id="mychart">Chart: </div>
+  </body>
+  <script type="text/javascript" src="donut-chart.js"></script>
+  <script type="text/javascript">
+    var chart_div = document.getElementById("mychart")
+    var mychart = new DonutChart(chart_div, {
+        r: 60,
+        stroke: 16,
+        scale: 100,
+        items: [
+            { label: "A", value: .2 },
+            { label: "B", value: .1 },
+            { label: "C", value: .5 },
+        ]
+    })
+    mychart.update({
+        items: [
+            { label: "J", value: .4 },
+            { label: "Q", value: .3 },
+        ]
+    })
+  </script>
+</html>
