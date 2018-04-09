@@ -28,7 +28,7 @@ function DonutChart(parent, spec) {
 	var prev = 0, out = []
 	// FIXME get radius and stroke-width from CSS
 	var c = chart.r, r = chart.r - chart.stroke / 2
-	for (i in chart.items) {
+	for (var i in chart.items) {
 	    cur = chart.items[i]
 	    __gen_chart_item(out, c, r, prev, cur.value, i, chart.stroke)
 	    prev += cur.value
@@ -43,7 +43,7 @@ function DonutChart(parent, spec) {
 	var root = document.createElementNS("http://www.w3.org/2000/svg", elem[0])
 	var attr = elem[1]
 	// Set attributes
-	for (i in attr) {
+	for (var i in attr) {
 	    var a = document.createAttribute(i)
 	    a.value = attr[i]
 	    root.setAttributeNode(a)
@@ -51,7 +51,7 @@ function DonutChart(parent, spec) {
 	// Create children nodes
 	if (elem.length > 2) {
 	    var children = elem[2]
-	    for (i in children) {
+	    for (var i in children) {
 		var c = __create_tag_tree(children[i])
 		root.appendChild(c)
 	    }
@@ -89,7 +89,7 @@ function DonutChart(parent, spec) {
 
     DonutChart.prototype.update = function(spec) {
 	// Merge the new spec
-	for (i in spec) {
+	for (var i in spec) {
 	    this.spec[i] = spec[i]
 	}
 
