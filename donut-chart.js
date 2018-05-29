@@ -140,13 +140,13 @@ function DonutChart(parent, spec) {
 			this.spec[i] = spec[i];
 		}
 
-		if (this.parent) {
+		if (!this.parent) {
+			throw new Error("No parent defined for the chart.")
+		} else {
 			var code = __gen_code(this.spec);
 			// TODO can we switch the elements in place?
 			if (this.element) this.element.remove();
 			this.element = this.parent.appendChild(code);
-		} else {
-			throw new Error("No parent defined for the chart.")
 		}
 	};
 
