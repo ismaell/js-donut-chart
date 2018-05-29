@@ -12,7 +12,7 @@ The API is very simple. First you need to find an element to insert the graph on
 Then you instantiate the class:
 
      var mychart = new DonutChart(chart_div, {
-        r: 60,
+        radius: 60,
         stroke: 16,
         scale: 100,
         items: [
@@ -31,5 +31,5 @@ And if you need to, you can update the values:
         ]
     })
 
-
-Have fun!
+- Have fun!
+https://raw.githubusercontent.com/ismaell/js-donut-chart
