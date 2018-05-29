@@ -31,5 +31,5 @@ And if you need to, you can update the values:
         ]
     })
 
-
+- Have fun!
 https://raw.githubusercontent.com/ismaell/js-donut-chart
